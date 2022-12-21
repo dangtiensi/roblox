@@ -4,8 +4,30 @@ local Window = Library.CreateLib("Menu Cheat - siben.vn", "Ocean")
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
+function noclip()
+    Clip = false
+    local function Nocl()
+        if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+            for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+                    v.CanCollide = false
+                end
+            end
+        end
+        wait(0.21) -- basic optimization
+    end
+    Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+    if Noclip then Noclip:Disconnect() end
+    Clip = true
+end
+
 MainSection:NewButton("Back/Front Flip", "Makes you do gymnastics", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    local Noclip = nil
+    local Clip = nil
+    noclip()
 end)
 
 MainSection:NewToggle("Super-Human", "go fast and jump high", function(state)
@@ -18,10 +40,9 @@ MainSection:NewToggle("Super-Human", "go fast and jump high", function(state)
     end
 end)
 
-MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
-
+-- MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+--     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+-- end)
 
 --LOCAL PLAYER
 local Player = Window:NewTab("Player")
