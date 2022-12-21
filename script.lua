@@ -17,7 +17,7 @@ Button.Parent = ScreenGui
 Button.BackgroundColor3 = Color3.fromRGB(74, 99, 135)
 Button.ClipsDescendants = true
 Button.AnchorPoint = Vector2.new(0.5, 0.5)
-Button.Position = UDim2.new(0.027, 0, 0.063, 0)
+Button.Position = UDim2.new(0.040, 0, 0.180, 0)
 Button.Image = "rbxassetid://11877618750"
 Button.Size = UDim2.new(0, 36, 0, 36)
 Button.InputBegan:Connect(function(InputObject)
