@@ -2,4 +2,4 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dangtiensi/roblox/main/ui.lua"))()
 local Window = Library.CreateLib("Menu Cheat - siben.vn", "Synapse")
 local Main = Window:NewTab("Main")
--- local MainSection = Main:NewSection("Main")
+local MainSection = Main:NewSection("Main")
