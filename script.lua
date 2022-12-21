@@ -1,10 +1,10 @@
 -- https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dangtiensi/roblox/main/ui.lua"))()
+local NoClip = loadstring(game:HttpGet("https://raw.githubusercontent.com/dangtiensi/roblox/main/noclip.lua"))()
 local Window = Library.CreateLib("Menu Cheat - siben.vn", "Ocean")
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
-local NoClip = loadstring(game:HttpGet("https://raw.githubusercontent.com/dangtiensi/roblox/main/noclip.lua"))()
 MainSection:NewToggle("Noclip", "go fast and jump high", function(state)
     if state then
         NoClip.On()
@@ -14,15 +14,15 @@ MainSection:NewToggle("Noclip", "go fast and jump high", function(state)
 end)
 
 --Jumppower
-local Jumppower = Window:NewTab("Jumppower")
-local JumppowerSection = Player:NewSection("Jumppower")
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
 local JumppowerValue = 50
 
-JumppowerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
     JumppowerValue = s
 end)
 
-JumppowerSection:NewButton("Reset Jumppower", "Resets to all defaults", function()
+PlayerSection:NewButton("Reset Jumppower", "Resets to all defaults", function()
     JumppowerValue = 50
 end)
 
