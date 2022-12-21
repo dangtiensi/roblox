@@ -35,9 +35,9 @@ end)
 -- end)
 
 --Set Value Player
-while wait() do
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumppowerValue
-end
+-- while wait() do
+--     game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumppowerValue
+-- end
 
 -- Button Toggle
 local ScreenGui = Instance.new("ScreenGui")
@@ -53,7 +53,7 @@ Button.BackgroundColor3 = Color3.fromRGB(74, 99, 135)
 Button.ClipsDescendants = true
 -- Button.AnchorPoint = Vector2.new(0.5, 0.5)
 Button.Position = UDim2.new(0.090, 0, 0.028, 0)
-Button.Image = "http://www.roblox.com/asset/?id=11778372375"
+Button.Image = "rbxassetid://11778372406"
 Button.Size = UDim2.new(0, 36, 0, 36)
 Button.InputBegan:Connect(function(InputObject)
     if InputObject.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
